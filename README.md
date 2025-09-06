@@ -2,7 +2,8 @@
 
 <div align="center">
 
-![Iconiqs Logo](img/modeling-agency-website-template.jpg)
+![Iconiqs Website Screenshot](modeling-agency-website-template.jpg)
+*Screenshot of the Iconiqs Modeling Agency Website*
 
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)]()
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)]()
