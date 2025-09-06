@@ -1,0 +1,314 @@
+# ==============================================
+# .gitignore for Iconiqs Modeling Agency Website
+# ==============================================
+
+# ===============================================
+# Operating System Generated Files
+# ===============================================
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# ===============================================
+# IDE and Editor Files
+# ===============================================
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Atom
+.atom/
+
+# JetBrains IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# ===============================================
+# Build Tools and Dependencies
+# ===============================================
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn-integrity
+
+# Package managers
+package-lock.json
+yarn.lock
+
+# Sass/SCSS compiled files
+*.css.map
+*.sass.map
+*.scss.map
+
+# Less compiled files
+*.less.map
+
+# ===============================================
+# Temporary and Cache Files
+# ===============================================
+
+# Temporary files
+*.tmp
+*.temp
+*.cache
+*.log
+
+# Cache directories
+.cache/
+.temp/
+.tmp/
+
+# Browser cache
+*.crx
+
+# ===============================================
+# Development and Testing
+# ===============================================
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Testing
+coverage/
+*.cover
+.nyc_output
+.jest
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# ===============================================
+# Backup and Archive Files
+# ===============================================
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+*.save
+
+# Archive files
+*.zip
+*.tar.gz
+*.tar
+*.rar
+*.7z
+
+# ===============================================
+# Image and Media Processing
+# ===============================================
+
+# Photoshop files
+*.psd
+*.ai
+*.eps
+
+# Sketch files
+*.sketch
+
+# Figma files
+*.fig
+
+# Original/Raw image files (keep optimized versions)
+/img/originals/
+/img/raw/
+/img/unoptimized/
+
+# Video files (usually too large for git)
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.wmv
+
+# ===============================================
+# Documentation and Notes
+# ===============================================
+
+# Personal notes
+TODO.md
+NOTES.md
+notes.txt
+personal-notes/
+
+# Draft documentation
+drafts/
+*.draft
+
+# ===============================================
+# Deployment and Build Output
+# ===============================================
+
+# Build directories
+build/
+dist/
+out/
+
+# Deployment files
+.netlify/
+.vercel/
+
+# FTP deployment
+.ftpconfig
+.ftppass
+
+# ===============================================
+# Version Control and Git
+# ===============================================
+
+# Git merge files
+*.orig
+
+# Git patches
+*.patch
+
+# ===============================================
+# Security and Sensitive Data
+# ===============================================
+
+# API keys and secrets
+secrets/
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Configuration files with sensitive data
+config.local.*
+local.config.*
+
+# ===============================================
+# Miscellaneous
+# ===============================================
+
+# Email template files (if any)
+*.eml
+
+# Compiled binaries
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Java
+*.class
+*.jar
+
+# Python
+*.pyc
+*.pyo
+__pycache__/
+
+# Ruby
+*.gem
+
+# ===============================================
+# Project Specific Exclusions
+# ===============================================
+
+# Development versions of images
+/img/dev/
+/img/test/
+
+# Backup HTML files
+*.html.bak
+*.html.backup
+
+# Custom CSS backups
+/css/backup/
+/css/old/
+
+# JavaScript development files
+/js/dev/
+/js/unminified/
+
+# SCSS source maps (if not needed)
+/scss/**/*.map
+
+# Template files for development
+template-*.html
+dev-*.html
+
+# Email templates (if created)
+email-templates/
+
+# Analytics and tracking files
+analytics/
+tracking/
+
+# ===============================================
+# Comments for Developers
+# ===============================================
+
+# ==============================================
+# Instructions for team members:
+# 
+# 1. Never commit sensitive data like API keys
+# 2. Keep original PSD/AI files in a separate repo
+# 3. Optimize images before committing
+# 4. Use descriptive commit messages
+# 5. Test locally before pushing
+# ==============================================

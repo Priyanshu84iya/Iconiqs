@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Iconiqs - Modeling Agency Website</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;700&family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Icon Fontylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Header Start -->
+     <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg navbar-dark px-lg-5">
+            <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
+                <h2 class="mb-0 text-primary text-uppercase"><i class="fa-regular fa-face-smile me-1"></i>Iconiqs</h2>
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav mx-auto p-4 p-lg-0">
+                    <a href="index.html" class="nav-item nav-link active">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="service.html" class="nav-item nav-link">Services</a>
+                    <a href="portfolio.html" class="nav-item nav-link">Portfolio</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="team.html" class="dropdown-item">Our Models</a>
+                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                            <a href="404.html" class="dropdown-item">404 Page</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <div class="d-none d-lg-flex">
+                    <a class="btn btn-sm-square btn-outline-primary border-2 ms-1" href=""><i class="fab fa-x-twitter"></i></a>
+                    <a class="btn btn-sm-square btn-outline-primary border-2 ms-1" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-sm-square btn-outline-primary border-2 ms-1" href=""><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </nav>
+
+        <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="img/carousel-1.jpg" alt="Iconiqs Models Showcase">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="title mx-5 px-5 animated slideInDown">
+                            <div class="title-center">
+                                <h5 class="text-primary fw-bold mb-3">DISCOVER YOUR POTENTIAL</h5>
+                                <h1 class="display-1 text-white fw-bold mb-4">Shape Your <span class="text-primary">Future</span> in Modeling</h1>
+                            </div>
+                        </div>
+                        <p class="fs-5 mb-5 animated slideInDown text-light">Join Iconiqs - Where dreams meet opportunities and talent finds its spotlight.<br>Professional modeling careers start here with industry-leading expertise.</p>
+                        <div class="d-flex gap-3 animated slideInUp">
+                            <a href="portfolio.html" class="btn btn-primary border-2 py-3 px-5 fs-6 fw-bold">View Portfolio</a>
+                            <a href="contact.html" class="btn btn-outline-light border-2 py-3 px-5 fs-6 fw-bold">Start Your Journey</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="img/carousel-2.jpg" alt="Professional Model Photography">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="title mx-5 px-5 animated slideInDown">
+                            <div class="title-center">
+                                <h5 class="text-primary fw-bold mb-3">PROFESSIONAL EXCELLENCE</h5>
+                                <h1 class="display-1 text-white fw-bold mb-4">Elevate Your <span class="text-primary">Brand</span></h1>
+                            </div>
+                        </div>
+                        <p class="fs-5 mb-5 animated slideInDown text-light">Premium casting services, professional development, and industry connections.<br>Your gateway to fashion, commercial, and artistic modeling success.</p>
+                        <div class="d-flex gap-3 animated slideInUp">
+                            <a href="service.html" class="btn btn-primary border-2 py-3 px-5 fs-6 fw-bold">Our Services</a>
+                            <a href="team.html" class="btn btn-outline-light border-2 py-3 px-5 fs-6 fw-bold">Meet Our Models</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+     </div>
+    <!-- Header End -->
+
+
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-7 pb-0 pb-lg-5 py-5">
+                    <div class="pb-0 pb-lg-5 py-5">
+                        <div class="title wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="title-left">
+                                <h5 class="text-primary fw-bold">OUR STORY</h5>
+                                <h1 class="display-4 fw-bold text-white mb-4">Redefining Beauty Standards Since <span class="text-primary">2020</span></h1>
+                            </div>
+                        </div>
+                        <p class="mb-4 wow fadeInUp text-light fs-6 lh-lg" data-wow-delay="0.2s">At Iconiqs, we believe every individual possesses unique beauty and potential. Our mission is to discover, nurture, and elevate emerging talent in the modeling industry. We provide comprehensive support, professional development, and industry connections to help our models achieve their dreams.</p>
+                        
+                        <div class="row mb-4 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="col-md-6 mb-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="bg-primary rounded-circle p-3 me-3">
+                                        <i class="fa fa-star text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="text-white fw-bold mb-1">500+ Models Launched</h6>
+                                        <p class="text-light mb-0 small">Successful careers started</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="bg-primary rounded-circle p-3 me-3">
+                                        <i class="fa fa-award text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="text-white fw-bold mb-1">Industry Recognition</h6>
+                                        <p class="text-light mb-0 small">Award-winning agency</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <ul class="list-group list-group-flush mb-5 wow fadeInUp" data-wow-delay="0.4s">
+                            <li class="list-group-item bg-transparent text-body border-secondary ps-0">
+                                <i class="fa fa-check-circle text-primary me-3"></i> Professional portfolio development and photography services
+                            </li>
+                            <li class="list-group-item bg-transparent text-body border-secondary ps-0">
+                                <i class="fa fa-check-circle text-primary me-3"></i> Personalized career guidance and industry mentorship
+                            </li>
+                            <li class="list-group-item bg-transparent text-body border-secondary ps-0">
+                                <i class="fa fa-check-circle text-primary me-3"></i> Exclusive casting opportunities with top brands and designers
+                            </li>
+                            <li class="list-group-item bg-transparent text-body border-secondary ps-0">
+                                <i class="fa fa-check-circle text-primary me-3"></i> Comprehensive training in runway, commercial, and editorial modeling
+                            </li>
+                        </ul>
+                        
+                        <div class="row wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="col-md-6 mb-3">
+                                <a href="contact.html" class="btn btn-primary py-3 w-100 fw-bold">Join Our Agency</a>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <a href="service.html" class="btn btn-outline-primary border-2 py-3 w-100 fw-bold">Book Casting</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="position-relative">
+                        <img class="img-fluid rounded-3 shadow-lg" src="img/about.png" alt="About Iconiqs Modeling Agency">
+                        <div class="position-absolute top-0 start-0 bg-primary text-white p-3 rounded-3 m-3">
+                            <h4 class="fw-bold mb-0">5+</h4>
+                            <p class="mb-0 small">Years Experience</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Call to Action Start -->
+    <div class="container-fluid py-5 bg-gradient" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);">
+        <div class="container py-5">
+            <div class="row g-0 justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <div class="title mx-5 px-5 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="title-center">
+                            <h5 class="text-primary fw-bold mb-3">START YOUR JOURNEY</h5>
+                            <h1 class="display-4 text-white fw-bold mb-4">Ready to Launch Your <span class="text-primary">Modeling Career?</span></h1>
+                        </div>
+                    </div>
+                    <p class="fs-5 mb-5 text-light wow fadeInUp lh-lg" data-wow-delay="0.2s">Join hundreds of successful models who started their journey with Iconiqs. Get discovered by top brands, fashion designers, and casting directors. Your dream career is just one click away.</p>
+                    
+                    <!-- Newsletter Signup -->
+                    <div class="row justify-content-center mb-4">
+                        <div class="col-lg-8">
+                            <div class="position-relative wow fadeInUp" data-wow-delay="0.3s">
+                                <input class="form-control border-0 bg-white rounded-pill w-100 py-4 ps-5 pe-5 shadow-lg" type="email" placeholder="Enter your email to get started" style="font-size: 16px;">
+                                <button type="button" class="btn btn-primary py-3 px-4 position-absolute top-0 end-0 me-2 rounded-pill shadow-sm" style="margin-top: 7px;">
+                                    <i class="fa fa-paper-plane"></i> Get Started
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Action Buttons -->
+                    <div class="d-flex flex-wrap gap-3 justify-content-center wow fadeInUp" data-wow-delay="0.4s">
+                        <a href="contact.html" class="btn btn-primary py-3 px-5 rounded-pill shadow-lg fw-bold">
+                            <i class="fa fa-user-plus me-2"></i>Apply Now
+                        </a>
+                        <a href="portfolio.html" class="btn btn-outline-light py-3 px-5 rounded-pill fw-bold">
+                            <i class="fa fa-images me-2"></i>View Portfolio
+                        </a>
+                        <a href="service.html" class="btn btn-outline-light py-3 px-5 rounded-pill fw-bold">
+                            <i class="fa fa-info-circle me-2"></i>Learn More
+                        </a>
+                    </div>
+                    
+                    <!-- Trust Indicators -->
+                    <div class="row mt-5 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="col-md-4 mb-3">
+                            <div class="text-center">
+                                <h3 class="text-primary fw-bold">500+</h3>
+                                <p class="text-light mb-0">Models Launched</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="text-center">
+                                <h3 class="text-primary fw-bold">50+</h3>
+                                <p class="text-light mb-0">Brand Partners</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="text-center">
+                                <h3 class="text-primary fw-bold">95%</h3>
+                                <p class="text-light mb-0">Success Rate</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Call to Action End -->
+
+
+    <!-- Services Start -->
+    <div class="container-fluid py-5 bg-dark">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <div class="title wow fadeInUp" data-wow-delay="0.1s">
+                    <h5 class="text-primary fw-bold mb-3">OUR EXPERTISE</h5>
+                    <h1 class="display-4 text-white fw-bold">Premium <span class="text-primary">Modeling Services</span></h1>
+                    <p class="text-light fs-5 mt-4 mx-auto" style="max-width: 600px;">From runway to editorial, we provide comprehensive modeling services that elevate careers and create unforgettable experiences.</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Fashion Shows -->
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="service-card bg-secondary rounded-4 p-4 h-100 position-relative overflow-hidden">
+                        <div class="service-icon bg-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 80px; height: 80px;">
+                            <i class="fas fa-walking text-white fs-3"></i>
+                        </div>
+                        <h3 class="text-white fw-bold mb-3">Runway & Fashion Shows</h3>
+                        <p class="text-light mb-4 lh-lg">Professional runway training, fashion week placements, and exclusive designer collaborations. Walk the catwalks of major fashion capitals and work with renowned designers.</p>
+                        <ul class="list-unstyled mb-4">
+                            <li class="text-light mb-2"><i class="fa fa-check text-primary me-2"></i>International Fashion Week Access</li>
+                            <li class="text-light mb-2"><i class="fa fa-check text-primary me-2"></i>Designer Brand Collaborations</li>
+                            <li class="text-light mb-2"><i class="fa fa-check text-primary me-2"></i>Professional Runway Training</li>
+                        </ul>
+                        <a class="btn btn-outline-primary rounded-pill px-4 py-2" href="service.html">Learn More <i class="fa fa-arrow-right ms-1"></i></a>
+                        <div class="position-absolute bottom-0 end-0 opacity-10">
+                            <i class="fas fa-walking" style="font-size: 120px;"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Commercial Modeling -->
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-card bg-secondary rounded-4 p-4 h-100 position-relative overflow-hidden">
+                        <div class="service-icon bg-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 80px; height: 80px;">
+                            <i class="fas fa-camera text-white fs-3"></i>
+                        </div>
+                        <h3 class="text-white fw-bold mb-3">Commercial & Editorial</h3>
+                        <p class="text-light mb-4 lh-lg">High-profile commercial campaigns, magazine editorials, and brand ambassadorships with top-tier companies and luxury brands worldwide.</p>
+                        <ul class="list-unstyled mb-4">
+                            <li class="text-light mb-2"><i class="fa fa-check text-primary me-2"></i>Magazine Editorial Features</li>
+                            <li class="text-light mb-2"><i class="fa fa-check text-primary me-2"></i>Brand Ambassador Programs</li>
+                            <li class="text-light mb-2"><i class="fa fa-check text-primary me-2"></i>Commercial Campaign Bookings</li>
+                        </ul>
+                        <a class="btn btn-outline-primary rounded-pill px-4 py-2" href="service.html">Learn More <i class="fa fa-arrow-right ms-1"></i></a>
+                        <div class="position-absolute bottom-0 end-0 opacity-10">
+                            <i class="fas fa-camera" style="font-size: 120px;"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Development -->
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="service-card bg-secondary rounded-4 p-4 h-100 position-relative overflow-hidden">
+                        <div class="service-icon bg-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 80px; height: 80px;">
+                            <i class="fas fa-images text-white fs-3"></i>
+                        </div>
+                        <h3 class="text-white fw-bold mb-3">Portfolio Development</h3>
+                        <p class="text-light mb-4 lh-lg">Professional photography sessions, styling consultations, and comprehensive portfolio creation to showcase your unique look and versatility.</p>
+                        <ul class="list-unstyled mb-4">
+                            <li class="text-light mb-2"><i class="fa fa-check text-primary me-2"></i>Professional Photo Shoots</li>
+                            <li class="text-light mb-2"><i class="fa fa-check text-primary me-2"></i>Digital Portfolio Creation</li>
+                            <li class="text-light mb-2"><i class="fa fa-check text-primary me-2"></i>Styling & Makeup Consultation</li>
+                        </ul>
+                        <a class="btn btn-outline-primary rounded-pill px-4 py-2" href="service.html">Learn More <i class="fa fa-arrow-right ms-1"></i></a>
+                        <div class="position-absolute bottom-0 end-0 opacity-10">
+                            <i class="fas fa-images" style="font-size: 120px;"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Career Development -->
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-card bg-secondary rounded-4 p-4 h-100 position-relative overflow-hidden">
+                        <div class="service-icon bg-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 80px; height: 80px;">
+                            <i class="fas fa-chart-line text-white fs-3"></i>
+                        </div>
+                        <h3 class="text-white fw-bold mb-3">Career Development</h3>
+                        <p class="text-light mb-4 lh-lg">Personalized mentorship, industry networking opportunities, and strategic career planning to accelerate your success in the modeling industry.</p>
+                        <ul class="list-unstyled mb-4">
+                            <li class="text-light mb-2"><i class="fa fa-check text-primary me-2"></i>One-on-One Mentorship</li>
+                            <li class="text-light mb-2"><i class="fa fa-check text-primary me-2"></i>Industry Networking Events</li>
+                            <li class="text-light mb-2"><i class="fa fa-check text-primary me-2"></i>Career Strategy Planning</li>
+                        </ul>
+                        <a class="btn btn-outline-primary rounded-pill px-4 py-2" href="service.html">Learn More <i class="fa fa-arrow-right ms-1"></i></a>
+                        <div class="position-absolute bottom-0 end-0 opacity-10">
+                            <i class="fas fa-chart-line" style="font-size: 120px;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="text-center mt-5 wow fadeInUp" data-wow-delay="0.6s">
+                <a href="service.html" class="btn btn-primary py-3 px-5 rounded-pill fw-bold me-3">
+                    <i class="fa fa-eye me-2"></i>View All Services
+                </a>
+                <a href="contact.html" class="btn btn-outline-primary py-3 px-5 rounded-pill fw-bold">
+                    <i class="fa fa-calendar me-2"></i>Book Consultation
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Services End -->
+
+
+    <!-- Portfolio Start -->
+    <div class="container-fluid py-5 bg-secondary">
+        <div class="container py-5">
+            <div class="row g-0">
+                <div class="col-sm-12 col-md-8 col-lg-6">
+                    <div class="h-100 p-5 bg-dark d-flex align-items-center justify-content-center">
+                        <div class="title mb-0 wow fadeIn" data-wow-delay="0.1s">
+                            <div class="title-left">
+                                <h5>Portfolio</h5>
+                                <h1>Our Works</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="portfolio-item overflow-hidden">
+                        <img class="img-fluid" src="img/portfolio-1.jpg" alt="">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-btn">
+                                <a class="btn btn-lg-square btn-outline-primary border-2 mx-1" href="img/portfolio-1.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-lg-square btn-outline-primary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                            </div>
+                            <div class="portfolio-name">
+                                <h5 class="text-uppercase mb-0">Jessica Lee</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="portfolio-item overflow-hidden">
+                        <img class="img-fluid" src="img/portfolio-2.jpg" alt="">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-btn">
+                                <a class="btn btn-lg-square btn-outline-primary border-2 mx-1" href="img/portfolio-2.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-lg-square btn-outline-primary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                            </div>
+                            <div class="portfolio-name">
+                                <h5 class="text-uppercase mb-0">Joanne Irwin</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="portfolio-item overflow-hidden">
+                        <img class="img-fluid" src="img/portfolio-3.jpg" alt="">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-btn">
+                                <a class="btn btn-lg-square btn-outline-primary border-2 mx-1" href="img/portfolio-3.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-lg-square btn-outline-primary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                            </div>
+                            <div class="portfolio-name">
+                                <h5 class="text-uppercase mb-0">Sarah Quinn</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="portfolio-item overflow-hidden">
+                        <img class="img-fluid" src="img/portfolio-4.jpg" alt="">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-btn">
+                                <a class="btn btn-lg-square btn-outline-primary border-2 mx-1" href="img/portfolio-4.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-lg-square btn-outline-primary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                            </div>
+                            <div class="portfolio-name">
+                                <h5 class="text-uppercase mb-0">Pamela Torney</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="portfolio-item overflow-hidden">
+                        <img class="img-fluid" src="img/portfolio-5.jpg" alt="">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-btn">
+                                <a class="btn btn-lg-square btn-outline-primary border-2 mx-1" href="img/portfolio-5.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-lg-square btn-outline-primary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                            </div>
+                            <div class="portfolio-name">
+                                <h5 class="text-uppercase mb-0">Lana Anderson</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
+                    <div class="portfolio-item overflow-hidden">
+                        <img class="img-fluid" src="img/portfolio-6.jpg" alt="">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-btn">
+                                <a class="btn btn-lg-square btn-outline-primary border-2 mx-1" href="img/portfolio-6.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-lg-square btn-outline-primary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                            </div>
+                            <div class="portfolio-name">
+                                <h5 class="text-uppercase mb-0">Pamela Stonem</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="portfolio-item overflow-hidden">
+                        <img class="img-fluid" src="img/portfolio-7.jpg" alt="">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-btn">
+                                <a class="btn btn-lg-square btn-outline-primary border-2 mx-1" href="img/portfolio-7.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-lg-square btn-outline-primary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                            </div>
+                            <div class="portfolio-name">
+                                <h5 class="text-uppercase mb-0">Gillian Rowe</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="portfolio-item overflow-hidden">
+                        <img class="img-fluid" src="img/portfolio-8.jpg" alt="">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-btn">
+                                <a class="btn btn-lg-square btn-outline-primary border-2 mx-1" href="img/portfolio-8.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-lg-square btn-outline-primary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                            </div>
+                            <div class="portfolio-name">
+                                <h5 class="text-uppercase mb-0">Naomy Olsen</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="portfolio-item overflow-hidden">
+                        <img class="img-fluid" src="img/portfolio-9.jpg" alt="">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-btn">
+                                <a class="btn btn-lg-square btn-outline-primary border-2 mx-1" href="img/portfolio-9.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-lg-square btn-outline-primary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                            </div>
+                            <div class="portfolio-name">
+                                <h5 class="text-uppercase mb-0">Barbara Serney</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="h-100 p-5 bg-dark d-flex flex-column align-items-center justify-content-center wow fadeIn" data-wow-delay="0.7s">
+                        <a href="" class="btn btn-outline-primary border-2 py-3 w-100 mb-3">Become A Model</a>
+                        <a href="" class="btn btn-primary py-3 w-100">Schedule Casting</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio End -->
+    
+
+    <!-- Team Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="text-center">
+                <div class="title wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="title-center">
+                        <h5>Models</h5>
+                        <h1>Meet Our Models</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item">
+                        <div class="team-body">
+                            <div class="team-before">
+                                <span>Age</span>
+                                <span>Height</span>
+                                <span>Weight</span>
+                                <span>Bust</span>
+                                <span>Waist</span>
+                                <span>Hips</span>
+                            </div>
+                            <img class="img-fluid" src="img/team-1.jpg" alt="">
+                            <div class="team-after">
+                                <span>22</span>
+                                <span>185</span>
+                                <span>55</span>
+                                <span>79</span>
+                                <span>59</span>
+                                <span>89</span>
+                            </div>
+                        </div>
+                        <a class="team-name" href="#">
+                            <h5 class="text-uppercase mb-0">Naomy Olsen</h5>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item">
+                        <div class="team-body">
+                            <div class="team-before">
+                                <span>Age</span>
+                                <span>Height</span>
+                                <span>Weight</span>
+                                <span>Bust</span>
+                                <span>Waist</span>
+                                <span>Hips</span>
+                            </div>
+                            <img class="img-fluid" src="img/team-2.jpg" alt="">
+                            <div class="team-after">
+                                <span>22</span>
+                                <span>185</span>
+                                <span>55</span>
+                                <span>79</span>
+                                <span>59</span>
+                                <span>89</span>
+                            </div>
+                        </div>
+                        <a class="team-name" href="#">
+                            <h5 class="text-uppercase mb-0">Pamela Torney</h5>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item">
+                        <div class="team-body">
+                            <div class="team-before">
+                                <span>Age</span>
+                                <span>Height</span>
+                                <span>Weight</span>
+                                <span>Bust</span>
+                                <span>Waist</span>
+                                <span>Hips</span>
+                            </div>
+                            <img class="img-fluid" src="img/team-3.jpg" alt="">
+                            <div class="team-after">
+                                <span>22</span>
+                                <span>185</span>
+                                <span>55</span>
+                                <span>79</span>
+                                <span>59</span>
+                                <span>89</span>
+                            </div>
+                        </div>
+                        <a class="team-name" href="#">
+                            <h5 class="text-uppercase mb-0">Joanne Irwin</h5>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="team-item">
+                        <div class="team-body">
+                            <div class="team-before">
+                                <span>Age</span>
+                                <span>Height</span>
+                                <span>Weight</span>
+                                <span>Bust</span>
+                                <span>Waist</span>
+                                <span>Hips</span>
+                            </div>
+                            <img class="img-fluid" src="img/team-4.jpg" alt="">
+                            <div class="team-after">
+                                <span>22</span>
+                                <span>185</span>
+                                <span>55</span>
+                                <span>79</span>
+                                <span>59</span>
+                                <span>89</span>
+                            </div>
+                        </div>
+                        <a class="team-name" href="#">
+                            <h5 class="text-uppercase mb-0">Gillian Rowe</h5>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item">
+                        <div class="team-body">
+                            <div class="team-before">
+                                <span>Age</span>
+                                <span>Height</span>
+                                <span>Weight</span>
+                                <span>Bust</span>
+                                <span>Waist</span>
+                                <span>Hips</span>
+                            </div>
+                            <img class="img-fluid" src="img/team-5.jpg" alt="">
+                            <div class="team-after">
+                                <span>22</span>
+                                <span>185</span>
+                                <span>55</span>
+                                <span>79</span>
+                                <span>59</span>
+                                <span>89</span>
+                            </div>
+                        </div>
+                        <a class="team-name" href="#">
+                            <h5 class="text-uppercase mb-0">Naomy Olsen</h5>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item">
+                        <div class="team-body">
+                            <div class="team-before">
+                                <span>Age</span>
+                                <span>Height</span>
+                                <span>Weight</span>
+                                <span>Bust</span>
+                                <span>Waist</span>
+                                <span>Hips</span>
+                            </div>
+                            <img class="img-fluid" src="img/team-6.jpg" alt="">
+                            <div class="team-after">
+                                <span>22</span>
+                                <span>185</span>
+                                <span>55</span>
+                                <span>79</span>
+                                <span>59</span>
+                                <span>89</span>
+                            </div>
+                        </div>
+                        <a class="team-name" href="#">
+                            <h5 class="text-uppercase mb-0">Pamela Torney</h5>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item">
+                        <div class="team-body">
+                            <div class="team-before">
+                                <span>Age</span>
+                                <span>Height</span>
+                                <span>Weight</span>
+                                <span>Bust</span>
+                                <span>Waist</span>
+                                <span>Hips</span>
+                            </div>
+                            <img class="img-fluid" src="img/team-7.jpg" alt="">
+                            <div class="team-after">
+                                <span>22</span>
+                                <span>185</span>
+                                <span>55</span>
+                                <span>79</span>
+                                <span>59</span>
+                                <span>89</span>
+                            </div>
+                        </div>
+                        <a class="team-name" href="#">
+                            <h5 class="text-uppercase mb-0">Joanne Irwin</h5>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="team-item">
+                        <div class="team-body">
+                            <div class="team-before">
+                                <span>Age</span>
+                                <span>Height</span>
+                                <span>Weight</span>
+                                <span>Bust</span>
+                                <span>Waist</span>
+                                <span>Hips</span>
+                            </div>
+                            <img class="img-fluid" src="img/team-8.jpg" alt="">
+                            <div class="team-after">
+                                <span>22</span>
+                                <span>185</span>
+                                <span>55</span>
+                                <span>79</span>
+                                <span>59</span>
+                                <span>89</span>
+                            </div>
+                        </div>
+                        <a class="team-name" href="#">
+                            <h5 class="text-uppercase mb-0">Gillian Rowe</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid py-5 bg-secondary">
+        <div class="container py-5">
+            <div class="text-center">
+                <div class="title wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="title-center">
+                        <h5>Testimonial</h5>
+                        <h1>Our Clients Say</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.3s">
+                <div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='img/testimonial-1.jpg' alt=''>">
+                    <p class="fs-5">Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
+                    <h5 class="text-uppercase">Joanne Irwin</h5>
+                    <span class="text-primary">Profession</span>
+                </div>
+                <div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='img/testimonial-2.jpg' alt=''>">
+                    <p class="fs-5">Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
+                    <h5 class="text-uppercase">Lana Anderson</h5>
+                    <span class="text-primary">Profession</span>
+                </div>
+                <div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='img/testimonial-3.jpg' alt=''>">
+                    <p class="fs-5">Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
+                    <h5 class="text-uppercase">Pamela Torney</h5>
+                    <span class="text-primary">Profession</span>
+                </div>
+            </div>      
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer py-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container text-center py-5">
+            <a href="index.html">
+                <h1 class="display-4 mb-3 text-white text-uppercase"><i class="fa-regular fa-face-smile me-1"></i>Iconiqs</h1>
+            </a>
+            <div class="d-flex justify-content-center mb-4">
+                <a class="btn btn-lg-square btn-outline-primary border-2 m-1" href="https://instagram.com/pry_uchiha" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a class="btn btn-lg-square btn-outline-primary border-2 m-1" href="https://github.com/Priyanshu84iya" target="_blank"><i class="fab fa-github"></i></a>
+                <a class="btn btn-lg-square btn-outline-primary border-2 m-1" href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-lg-square btn-outline-primary border-2 m-1" href="https://twitter.com/yourusername" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p>&copy; 2025 Iconiqs | All Rights Reserved</p>
+
+
+            <p class="mb-0">Developed By <a class="border-bottom" href="https://github.com/Priyanshu84iya">Priyanshu Chaurasiya</a></p>
+            <p class="mb-0">Follow on <a class="border-bottom" href="https://instagram.com/pry_uchiha">Instagram</a></p>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-outline-primary border-2 btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
