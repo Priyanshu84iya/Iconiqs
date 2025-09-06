@@ -12,7 +12,7 @@
 
 *Redefining Beauty Standards Since 2020*
 
-[🌐 Live Demo](https://iconiqs-modeling.netlify.app) · [📧 Contact](mailto:contact@iconiqs.com) · [📱 Instagram](https://instagram.com/pry_uchiha)
+[🌐 Live Demo](https://priyanshu84iya.github.io/Iconiqs/) · [📧 Contact](mailto:contact@iconiqs.com) · [📱 Instagram](https://instagram.com/pry_uchiha)
 
 </div>
 
