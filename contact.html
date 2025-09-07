@@ -101,77 +101,294 @@
     <!-- Contact Start -->
     <div class="container-fluid py-5">
         <div class="container py-5">
+            <!-- Section Header -->
+            <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+                <h5 class="text-primary text-uppercase">Get In Touch</h5>
+                <h1 class="display-5 mb-4">Let's Start Your Modeling Journey</h1>
+                <p class="text-muted">Ready to take your modeling career to the next level? Contact our professional team for bookings, consultations, and career guidance.</p>
+            </div>
+
+            <!-- Contact Methods -->
+            <div class="row g-4 mb-5">
+                <div class="col-lg-3 col-md-6">
+                    <div class="contact-method-card h-100 text-center p-4">
+                        <div class="contact-icon mb-3">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h5>Call Us</h5>
+                        <p class="text-muted mb-3">Speak directly with our team</p>
+                        <a href="tel:+1234567890" class="btn btn-outline-primary btn-sm">+1 (234) 567-8900</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="contact-method-card h-100 text-center p-4">
+                        <div class="contact-icon mb-3">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h5>Email Us</h5>
+                        <p class="text-muted mb-3">Get a response within 24 hours</p>
+                        <a href="mailto:bookings@iconiqs.com" class="btn btn-outline-primary btn-sm">bookings@iconiqs.com</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="contact-method-card h-100 text-center p-4">
+                        <div class="contact-icon mb-3">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h5>Visit Us</h5>
+                        <p class="text-muted mb-3">Our modeling agency office</p>
+                        <address class="mb-3">Fashion District<br>New York, NY 10018</address>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="contact-method-card h-100 text-center p-4">
+                        <div class="contact-icon mb-3">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h5>Book Consultation</h5>
+                        <p class="text-muted mb-3">Free career consultation</p>
+                        <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#bookingModal">Schedule Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Contact Form -->
             <div class="row g-5">
                 <div class="col-lg-6">
-                    <div class="title wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="title-left">
-                            <h5>Contact</h5>
-                            <h1>Please Contact Us</h1>
+                    <div class="contact-form-section">
+                        <h3 class="mb-4">Send Us a Message</h3>
+                        <form id="contactForm" novalidate>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Full Name" required>
+                                        <label for="fullName">Full Name *</label>
+                                        <div class="invalid-feedback">Please provide your full name.</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="Email Address" required>
+                                        <label for="email">Email Address *</label>
+                                        <div class="invalid-feedback">Please provide a valid email address.</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone Number" required>
+                                        <label for="phone">Phone Number *</label>
+                                        <div class="invalid-feedback">Please provide your phone number.</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="inquiryType" name="inquiryType" required>
+                                            <option value="">Select Inquiry Type</option>
+                                            <option value="model-booking">Model Booking</option>
+                                            <option value="career-consultation">Career Consultation</option>
+                                            <option value="portfolio-review">Portfolio Review</option>
+                                            <option value="partnership">Business Partnership</option>
+                                            <option value="general">General Inquiry</option>
+                                        </select>
+                                        <label for="inquiryType">Inquiry Type *</label>
+                                        <div class="invalid-feedback">Please select an inquiry type.</div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
+                                        <label for="subject">Subject *</label>
+                                        <div class="invalid-feedback">Please provide a subject.</div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" id="message" name="message" placeholder="Your Message" style="height: 150px" required></textarea>
+                                        <label for="message">Your Message *</label>
+                                        <div class="invalid-feedback">Please provide your message.</div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="agreeTerms" required>
+                                        <label class="form-check-label" for="agreeTerms">
+                                            I agree to the <a href="#" class="text-primary">Terms & Conditions</a> and <a href="#" class="text-primary">Privacy Policy</a> *
+                                        </label>
+                                        <div class="invalid-feedback">You must agree to the terms and conditions.</div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-primary py-3 px-5" type="submit">
+                                        <i class="fas fa-paper-plane me-2"></i>Send Message
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="contact-info-section">
+                        <h3 class="mb-4">Why Choose Iconiqs?</h3>
+                        
+                        <div class="contact-feature mb-4">
+                            <div class="d-flex align-items-start">
+                                <div class="feature-icon me-3">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div>
+                                    <h5>Professional Excellence</h5>
+                                    <p class="text-muted mb-0">Over 10 years of experience in the modeling industry with top-tier clients and international campaigns.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-feature mb-4">
+                            <div class="d-flex align-items-start">
+                                <div class="feature-icon me-3">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div>
+                                    <h5>Expert Team</h5>
+                                    <p class="text-muted mb-0">Our team of industry professionals provides personalized career guidance and development.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-feature mb-4">
+                            <div class="d-flex align-items-start">
+                                <div class="feature-icon me-3">
+                                    <i class="fas fa-globe"></i>
+                                </div>
+                                <div>
+                                    <h5>Global Network</h5>
+                                    <p class="text-muted mb-0">Connected with leading brands, photographers, and agencies worldwide for maximum opportunities.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-feature mb-4">
+                            <div class="d-flex align-items-start">
+                                <div class="feature-icon me-3">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h5>Quick Response</h5>
+                                    <p class="text-muted mb-0">We respond to all inquiries within 24 hours and provide ongoing support throughout your journey.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contact Stats -->
+                        <div class="contact-stats mt-5">
+                            <div class="row g-3">
+                                <div class="col-4">
+                                    <div class="stat-card text-center">
+                                        <h3 class="text-primary counter" data-count="500">0</h3>
+                                        <small class="text-muted">Models Represented</small>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="stat-card text-center">
+                                        <h3 class="text-primary counter" data-count="1200">0</h3>
+                                        <small class="text-muted">Successful Bookings</small>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="stat-card text-center">
+                                        <h3 class="text-primary counter" data-count="24">0</h3>
+                                        <small class="text-muted">Hours Support</small>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <p class="mb-4 wow fadeInUp" data-wow-delay="0.2s">The contact form is currently inactive. Get a functional and working contact form
-                        with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're
-                        done..</p>
-                    <table class="table table-dark mb-0 wow fadeInUp" data-wow-delay="0.3s">
-                        <tr>
-                            <td>PHONE</td>
-                            <td>+0123456789</td>
-                        </tr>
-                        <tr>
-                            <td>E-MAIL</td>
-                            <td>info@example.com</td>
-                        </tr>
-                        <tr>
-                            <td>ADDRESS</td>
-                            <td>123 Street, NOIDA, INDIA</td>
-                        </tr>
-                        <tr class="border-dark">
-                            <td>FOLLOW US</td>
-                            <td>
-                                <a class="me-1" href=""><i class="fab fa-x-twitter"></i></a>
-                                <a class="me-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="me-1" href=""><i class="fab fa-youtube"></i></a>
-                                <a class="me-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                            </td>
-                        </tr>
-                    </table>
                 </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Booking Modal -->
+    <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="bookingModalLabel">Schedule a Consultation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="bookingForm" novalidate>
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control bg-secondary border-0" id="name"
-                                        placeholder="Your Name">
-                                    <label for="name">Your Name</label>
+                                    <input type="text" class="form-control" id="bookingName" name="bookingName" placeholder="Full Name" required>
+                                    <label for="bookingName">Full Name *</label>
+                                    <div class="invalid-feedback">Please provide your name.</div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control bg-secondary border-0" id="email"
-                                        placeholder="Your Email">
-                                    <label for="email">Your Email</label>
+                                    <input type="email" class="form-control" id="bookingEmail" name="bookingEmail" placeholder="Email Address" required>
+                                    <label for="bookingEmail">Email Address *</label>
+                                    <div class="invalid-feedback">Please provide a valid email.</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="tel" class="form-control" id="bookingPhone" name="bookingPhone" placeholder="Phone Number" required>
+                                    <label for="bookingPhone">Phone Number *</label>
+                                    <div class="invalid-feedback">Please provide your phone number.</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <select class="form-select" id="consultationType" name="consultationType" required>
+                                        <option value="">Select Consultation Type</option>
+                                        <option value="career-guidance">Career Guidance</option>
+                                        <option value="portfolio-review">Portfolio Review</option>
+                                        <option value="contract-discussion">Contract Discussion</option>
+                                        <option value="training-programs">Training Programs</option>
+                                    </select>
+                                    <label for="consultationType">Consultation Type *</label>
+                                    <div class="invalid-feedback">Please select consultation type.</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="date" class="form-control" id="preferredDate" name="preferredDate" required>
+                                    <label for="preferredDate">Preferred Date *</label>
+                                    <div class="invalid-feedback">Please select a date.</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <select class="form-select" id="preferredTime" name="preferredTime" required>
+                                        <option value="">Select Time</option>
+                                        <option value="09:00">9:00 AM</option>
+                                        <option value="10:00">10:00 AM</option>
+                                        <option value="11:00">11:00 AM</option>
+                                        <option value="14:00">2:00 PM</option>
+                                        <option value="15:00">3:00 PM</option>
+                                        <option value="16:00">4:00 PM</option>
+                                    </select>
+                                    <label for="preferredTime">Preferred Time *</label>
+                                    <div class="invalid-feedback">Please select a time.</div>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control bg-secondary border-0" id="subject"
-                                        placeholder="Subject">
-                                    <label for="subject">Subject</label>
+                                    <textarea class="form-control" id="bookingMessage" name="bookingMessage" placeholder="Additional Information" style="height: 100px"></textarea>
+                                    <label for="bookingMessage">Additional Information</label>
                                 </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <textarea class="form-control bg-secondary border-0" placeholder="Leave a message here"
-                                        id="message" style="height: 150px"></textarea>
-                                    <label for="message">Message</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <button class="btn btn-outline-primary border-2 w-100 py-3" type="submit">Send Message</button>
                             </div>
                         </div>
                     </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" form="bookingForm" class="btn btn-primary">
+                        <i class="fas fa-calendar-check me-2"></i>Schedule Consultation
+                    </button>
                 </div>
             </div>
         </div>

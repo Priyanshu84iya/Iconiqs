@@ -335,6 +335,263 @@
         }
     );
 
+    // Contact Page Functionality
+    if (window.location.pathname.includes('contact.html')) {
+        initializeContactPage();
+    }
+
+    function initializeContactPage() {
+        // Contact form validation and submission
+        $('#contactForm').on('submit', function(e) {
+            e.preventDefault();
+            
+            if (validateContactForm()) {
+                submitContactForm();
+            }
+        });
+
+        // Booking form validation and submission
+        $('#bookingForm').on('submit', function(e) {
+            e.preventDefault();
+            
+            if (validateBookingForm()) {
+                submitBookingForm();
+            }
+        });
+
+        // Animate contact method cards on scroll
+        animateContactCards();
+
+        // Initialize contact stats counter
+        initializeContactStatsCounter();
+
+        // Set minimum date for booking to today
+        var today = new Date().toISOString().split('T')[0];
+        $('#preferredDate').attr('min', today);
+    }
+
+    function validateContactForm() {
+        var form = document.getElementById('contactForm');
+        var isValid = form.checkValidity();
+        
+        form.classList.add('was-validated');
+        
+        // Custom validation for email
+        var email = $('#email').val();
+        if (email && !isValidEmail(email)) {
+            $('#email').addClass('is-invalid');
+            $('#email').next('.invalid-feedback').text('Please enter a valid email address.');
+            isValid = false;
+        }
+
+        // Custom validation for phone
+        var phone = $('#phone').val();
+        if (phone && !isValidPhone(phone)) {
+            $('#phone').addClass('is-invalid');
+            $('#phone').next('.invalid-feedback').text('Please enter a valid phone number.');
+            isValid = false;
+        }
+
+        return isValid;
+    }
+
+    function validateBookingForm() {
+        var form = document.getElementById('bookingForm');
+        var isValid = form.checkValidity();
+        
+        form.classList.add('was-validated');
+        
+        // Custom validation for booking email
+        var email = $('#bookingEmail').val();
+        if (email && !isValidEmail(email)) {
+            $('#bookingEmail').addClass('is-invalid');
+            $('#bookingEmail').next('.invalid-feedback').text('Please enter a valid email address.');
+            isValid = false;
+        }
+
+        // Custom validation for booking phone
+        var phone = $('#bookingPhone').val();
+        if (phone && !isValidPhone(phone)) {
+            $('#bookingPhone').addClass('is-invalid');
+            $('#bookingPhone').next('.invalid-feedback').text('Please enter a valid phone number.');
+            isValid = false;
+        }
+
+        // Validate date is not in the past
+        var selectedDate = new Date($('#preferredDate').val());
+        var today = new Date();
+        today.setHours(0, 0, 0, 0);
+        
+        if (selectedDate < today) {
+            $('#preferredDate').addClass('is-invalid');
+            $('#preferredDate').next('.invalid-feedback').text('Please select a future date.');
+            isValid = false;
+        }
+
+        return isValid;
+    }
+
+    function isValidEmail(email) {
+        var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regex.test(email);
+    }
+
+    function isValidPhone(phone) {
+        var regex = /^[\+]?[\d\s\-\(\)]{10,}$/;
+        return regex.test(phone);
+    }
+
+    function submitContactForm() {
+        var $submitBtn = $('#contactForm button[type="submit"]');
+        var originalText = $submitBtn.html();
+        
+        // Show loading state
+        $submitBtn.addClass('btn-loading').prop('disabled', true);
+        $submitBtn.html('<span class="btn-text">Sending...</span>');
+        
+        // Simulate form submission (replace with actual AJAX call)
+        setTimeout(function() {
+            // Reset button state
+            $submitBtn.removeClass('btn-loading').prop('disabled', false);
+            $submitBtn.html(originalText);
+            
+            // Show success message
+            showMessage('success', 'Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.');
+            
+            // Reset form
+            $('#contactForm')[0].reset();
+            $('#contactForm').removeClass('was-validated');
+        }, 2000);
+    }
+
+    function submitBookingForm() {
+        var $submitBtn = $('#bookingForm').closest('.modal').find('button[type="submit"]');
+        var originalText = $submitBtn.html();
+        
+        // Show loading state
+        $submitBtn.addClass('btn-loading').prop('disabled', true);
+        $submitBtn.html('<span class="btn-text">Scheduling...</span>');
+        
+        // Simulate booking submission (replace with actual AJAX call)
+        setTimeout(function() {
+            // Reset button state
+            $submitBtn.removeClass('btn-loading').prop('disabled', false);
+            $submitBtn.html(originalText);
+            
+            // Close modal
+            $('#bookingModal').modal('hide');
+            
+            // Show success message
+            showMessage('success', 'Consultation scheduled successfully! We\'ll send you a confirmation email shortly.');
+            
+            // Reset form
+            $('#bookingForm')[0].reset();
+            $('#bookingForm').removeClass('was-validated');
+        }, 2000);
+    }
+
+    function showMessage(type, message) {
+        var alertClass = type === 'success' ? 'alert-success' : 'alert-danger';
+        var icon = type === 'success' ? 'fas fa-check-circle' : 'fas fa-exclamation-circle';
+        
+        var alertHtml = `
+            <div class="alert ${alertClass} alert-dismissible fade show" role="alert">
+                <i class="${icon} me-2"></i>${message}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        `;
+        
+        // Insert alert at the top of the contact form section
+        $('.contact-form-section').prepend(alertHtml);
+        
+        // Auto-dismiss after 5 seconds
+        setTimeout(function() {
+            $('.alert').alert('close');
+        }, 5000);
+    }
+
+    function animateContactCards() {
+        var contactCards = $('.contact-method-card');
+        
+        $(window).scroll(function() {
+            contactCards.each(function(index) {
+                var card = $(this);
+                var cardTop = card.offset().top;
+                var windowBottom = $(window).scrollTop() + $(window).height();
+                
+                if (windowBottom > cardTop + 100 && !card.hasClass('animate')) {
+                    setTimeout(function() {
+                        card.addClass('animate');
+                    }, index * 200);
+                }
+            });
+        });
+    }
+
+    function initializeContactStatsCounter() {
+        var contactCountersAnimated = false;
+        
+        $(window).scroll(function() {
+            if ($('.contact-stats').length > 0 && !contactCountersAnimated) {
+                var statsTop = $('.contact-stats').offset().top;
+                var scrollTop = $(window).scrollTop();
+                var windowHeight = $(window).height();
+                
+                if (scrollTop + windowHeight > statsTop + 100) {
+                    animateContactCounters();
+                    contactCountersAnimated = true;
+                }
+            }
+        });
+    }
+
+    function animateContactCounters() {
+        $('.contact-stats .counter').each(function() {
+            var $this = $(this);
+            var countTo = $this.attr('data-count');
+            
+            $({ countNum: 0 }).animate({
+                countNum: countTo
+            }, {
+                duration: 2000,
+                easing: 'linear',
+                step: function() {
+                    $this.text(Math.floor(this.countNum));
+                },
+                complete: function() {
+                    $this.text(this.countNum);
+                }
+            });
+        });
+    }
+
+    // Real-time form validation feedback
+    $('.contact-form-section input, .contact-form-section select, .contact-form-section textarea').on('blur', function() {
+        if ($(this).is(':invalid')) {
+            $(this).addClass('is-invalid').removeClass('is-valid');
+        } else {
+            $(this).addClass('is-valid').removeClass('is-invalid');
+        }
+    });
+
+    // Clear validation states on input
+    $('.contact-form-section input, .contact-form-section select, .contact-form-section textarea').on('input', function() {
+        $(this).removeClass('is-invalid is-valid');
+    });
+
+    // Phone number formatting
+    $('#phone, #bookingPhone').on('input', function() {
+        var value = $(this).val().replace(/\D/g, '');
+        var formattedValue = value.replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3');
+        $(this).val(formattedValue);
+    });
+
+    // Auto-resize textarea
+    $('textarea').on('input', function() {
+        this.style.height = 'auto';
+        this.style.height = (this.scrollHeight) + 'px';
+    });
+
     
 })(jQuery);
 
