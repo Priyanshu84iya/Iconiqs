@@ -592,6 +592,249 @@
         this.style.height = (this.scrollHeight) + 'px';
     });
 
+    // 404 Page Functionality
+    if (window.location.pathname.includes('404.html')) {
+        initialize404Page();
+    }
+
+    function initialize404Page() {
+        // Initialize search functionality
+        initializeErrorPageSearch();
+        
+        // Initialize counter animations
+        initializeErrorPageCounters();
+        
+        // Add dynamic elements
+        addDynamicEffects();
+    }
+
+    function initializeErrorPageSearch() {
+        var searchInput = $('#pageSearch');
+        var suggestionsContainer = $('#searchSuggestions');
+        
+        // Page suggestions data
+        var pages = [
+            { name: 'Homepage', url: 'index.html', description: 'Main landing page' },
+            { name: 'About Us', url: 'about.html', description: 'Learn about our agency' },
+            { name: 'Services', url: 'service.html', description: 'Our modeling services' },
+            { name: 'Portfolio', url: 'portfolio.html', description: 'View our work gallery' },
+            { name: 'Our Models', url: 'team.html', description: 'Meet our talented models' },
+            { name: 'Testimonials', url: 'testimonial.html', description: 'Client feedback' },
+            { name: 'Contact', url: 'contact.html', description: 'Get in touch with us' },
+            { name: 'Fashion Photography', url: 'portfolio.html', description: 'Fashion shoots and campaigns' },
+            { name: 'Commercial Modeling', url: 'service.html', description: 'Commercial modeling services' },
+            { name: 'Model Booking', url: 'contact.html', description: 'Book our models' }
+        ];
+        
+        searchInput.on('input', function() {
+            var query = $(this).val().toLowerCase().trim();
+            
+            if (query.length >= 2) {
+                var filteredPages = pages.filter(page => 
+                    page.name.toLowerCase().includes(query) || 
+                    page.description.toLowerCase().includes(query)
+                );
+                
+                showSearchSuggestions(filteredPages);
+            } else {
+                hideSearchSuggestions();
+            }
+        });
+        
+        searchInput.on('keypress', function(e) {
+            if (e.which === 13) { // Enter key
+                var firstSuggestion = suggestionsContainer.find('.search-suggestion').first();
+                if (firstSuggestion.length) {
+                    window.location.href = firstSuggestion.data('url');
+                }
+            }
+        });
+        
+        // Close suggestions when clicking outside
+        $(document).on('click', function(e) {
+            if (!$(e.target).closest('.search-container').length) {
+                hideSearchSuggestions();
+            }
+        });
+    }
+
+    function showSearchSuggestions(suggestions) {
+        var suggestionsContainer = $('#searchSuggestions');
+        var html = '';
+        
+        if (suggestions.length > 0) {
+            suggestions.slice(0, 5).forEach(function(page) {
+                html += `
+                    <div class="search-suggestion" data-url="${page.url}">
+                        <strong>${page.name}</strong>
+                        <br><small>${page.description}</small>
+                    </div>
+                `;
+            });
+        } else {
+            html = '<div class="search-suggestion">No pages found</div>';
+        }
+        
+        suggestionsContainer.html(html).show();
+        
+        // Add click handlers
+        suggestionsContainer.find('.search-suggestion').on('click', function() {
+            var url = $(this).data('url');
+            if (url) {
+                window.location.href = url;
+            }
+        });
+    }
+
+    function hideSearchSuggestions() {
+        $('#searchSuggestions').hide();
+    }
+
+    function initializeErrorPageCounters() {
+        var errorCountersAnimated = false;
+        
+        function animateErrorCounters() {
+            $('.error-stats .counter').each(function() {
+                var $this = $(this);
+                var countTo = $this.attr('data-count');
+                
+                $({ countNum: 0 }).animate({
+                    countNum: countTo
+                }, {
+                    duration: 2000,
+                    easing: 'linear',
+                    step: function() {
+                        $this.text(Math.floor(this.countNum));
+                    },
+                    complete: function() {
+                        $this.text(this.countNum);
+                    }
+                });
+            });
+        }
+        
+        // Trigger animation on page load with delay
+        setTimeout(function() {
+            if (!errorCountersAnimated) {
+                animateErrorCounters();
+                errorCountersAnimated = true;
+            }
+        }, 1000);
+        
+        // Also trigger on scroll
+        $(window).scroll(function() {
+            if ($('.error-stats').length > 0 && !errorCountersAnimated) {
+                var statsTop = $('.error-stats').offset().top;
+                var scrollTop = $(window).scrollTop();
+                var windowHeight = $(window).height();
+                
+                if (scrollTop + windowHeight > statsTop + 100) {
+                    animateErrorCounters();
+                    errorCountersAnimated = true;
+                }
+            }
+        });
+    }
+
+    function addDynamicEffects() {
+        // Add random movement to floating elements
+        $('.floating-element').each(function(index) {
+            var element = $(this);
+            var randomDelay = Math.random() * 2000;
+            var randomDuration = 3000 + Math.random() * 2000;
+            
+            setTimeout(function() {
+                animateFloatingElement(element, randomDuration);
+            }, randomDelay);
+        });
+        
+        // Add glitch effect to error number occasionally
+        setInterval(function() {
+            if (Math.random() < 0.1) { // 10% chance every interval
+                $('.error-glitch').addClass('active');
+                setTimeout(function() {
+                    $('.error-glitch').removeClass('active');
+                }, 200);
+            }
+        }, 3000);
+        
+        // Add particle effect on action card hover
+        $('.action-card').hover(
+            function() {
+                createParticles($(this));
+            },
+            function() {
+                $(this).find('.particle').remove();
+            }
+        );
+    }
+
+    function animateFloatingElement(element, duration) {
+        var newTop = Math.random() * 80 + 10; // 10% to 90%
+        var newLeft = Math.random() * 80 + 10;
+        
+        element.animate({
+            top: newTop + '%',
+            left: newLeft + '%'
+        }, duration, 'easeInOutQuad', function() {
+            // Repeat animation
+            animateFloatingElement(element, 3000 + Math.random() * 2000);
+        });
+    }
+
+    function createParticles(card) {
+        for (var i = 0; i < 5; i++) {
+            setTimeout(function() {
+                var particle = $('<div class="particle"></div>');
+                particle.css({
+                    position: 'absolute',
+                    width: '4px',
+                    height: '4px',
+                    background: 'var(--primary)',
+                    borderRadius: '50%',
+                    top: Math.random() * 100 + '%',
+                    left: Math.random() * 100 + '%',
+                    opacity: 1,
+                    zIndex: 10
+                });
+                
+                card.css('position', 'relative').append(particle);
+                
+                particle.animate({
+                    top: '-20px',
+                    opacity: 0
+                }, 1000, function() {
+                    $(this).remove();
+                });
+            }, i * 100);
+        }
+    }
+
+    // Random message generator for 404 page
+    function getRandomErrorMessage() {
+        var messages = [
+            "This page went off the runway!",
+            "Looks like this model is out of frame!",
+            "This page is having a bad hair day!",
+            "Even our best photographers couldn't find this page!",
+            "This page is camera-shy today!",
+            "Oops! This page didn't make it to the photoshoot!"
+        ];
+        
+        return messages[Math.floor(Math.random() * messages.length)];
+    }
+
+    // Update error message randomly
+    if (window.location.pathname.includes('404.html')) {
+        setInterval(function() {
+            if (Math.random() < 0.3) { // 30% chance
+                $('.error-description').fadeOut(500, function() {
+                    $(this).text(getRandomErrorMessage() + " The page you're looking for doesn't exist, but don't worry - our models are still here and ready to strike a pose.").fadeIn(500);
+                });
+            }
+        }, 10000); // Every 10 seconds
+    }
+
     
 })(jQuery);
 
