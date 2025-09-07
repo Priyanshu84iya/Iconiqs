@@ -16,12 +16,67 @@
     new WOW().init();
 
 
-    // Sticky Navbar
+    // Enhanced Responsive Sticky Navbar
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 0) {
-            $('.navbar').addClass('position-fixed bg-dark shadow-sm');
+        var scroll = $(window).scrollTop();
+        var windowWidth = $(window).width();
+        
+        if (windowWidth >= 992) {
+            // Desktop behavior
+            if (scroll > 100) {
+                $('.navbar').addClass('scrolled position-fixed bg-dark shadow-sm');
+            } else {
+                $('.navbar').removeClass('scrolled position-fixed bg-dark shadow-sm');
+            }
         } else {
-            $('.navbar').removeClass('position-fixed bg-dark shadow-sm');
+            // Mobile/Tablet - navbar is always fixed
+            $('.navbar').addClass('position-fixed bg-dark shadow-sm');
+        }
+    });
+    
+    // Handle window resize to adjust navbar behavior
+    $(window).resize(function() {
+        var windowWidth = $(window).width();
+        if (windowWidth >= 992) {
+            // Reset mobile classes on desktop
+            if ($(window).scrollTop() <= 100) {
+                $('.navbar').removeClass('position-fixed bg-dark shadow-sm scrolled');
+            }
+        } else {
+            // Ensure mobile classes are applied
+            $('.navbar').addClass('position-fixed bg-dark shadow-sm');
+        }
+    });
+    
+    // Mobile navbar collapse on link click
+    $('.navbar-nav .nav-link').click(function() {
+        var windowWidth = $(window).width();
+        if (windowWidth < 992) {
+            $('.navbar-collapse').collapse('hide');
+        }
+    });
+    
+    // Close mobile navbar when clicking outside
+    $(document).click(function (event) {
+        var windowWidth = $(window).width();
+        if (windowWidth < 992) {
+            var clickover = $(event.target);
+            var _opened = $(".navbar-collapse").hasClass("show");
+            if (_opened === true && !clickover.hasClass("navbar-toggler") && !clickover.hasClass("navbar-toggler-icon")) {
+                $(".navbar-toggler").click();
+            }
+        }
+    });
+    
+    // Smooth scrolling for anchor links with navbar offset
+    $('a[href^="#"]').click(function(event) {
+        var target = $(this.hash);
+        if (target.length) {
+            event.preventDefault();
+            var offset = $(window).width() < 992 ? 100 : 80;
+            $('html, body').animate({
+                scrollTop: target.offset().top - offset
+            }, 1000);
         }
     });
     
