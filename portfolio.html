@@ -94,148 +94,189 @@
     <!-- Portfolio Start -->
     <div class="container-fluid py-5 bg-secondary">
         <div class="container py-5">
-            <div class="row g-0">
-                <div class="col-sm-12 col-md-8 col-lg-6">
-                    <div class="h-100 p-5 bg-dark d-flex align-items-center justify-content-center">
-                        <div class="title mb-0 wow fadeIn" data-wow-delay="0.1s">
-                            <div class="title-left">
-                                <h5>Portfolio</h5>
-                                <h1>Our Works</h1>
+            <div class="row mb-4">
+                <div class="col-lg-12 text-center">
+                    <h5 class="text-primary text-uppercase mb-2">Portfolio</h5>
+                    <h1 class="display-5 mb-4">Our Featured Works</h1>
+                    <div id="portfolio-filters" class="d-inline-block mb-3">
+                        <button class="btn btn-outline-primary active mx-1 mb-2" data-filter="*">All</button>
+                        <button class="btn btn-outline-primary mx-1 mb-2" data-filter=".fashion">Fashion</button>
+                        <button class="btn btn-outline-primary mx-1 mb-2" data-filter=".commercial">Commercial</button>
+                        <button class="btn btn-outline-primary mx-1 mb-2" data-filter=".editorial">Editorial</button>
+                        <button class="btn btn-outline-primary mx-1 mb-2" data-filter=".runway">Runway</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4 portfolio-container">
+                <!-- Portfolio Item 1 -->
+                <div class="col-sm-6 col-md-4 col-lg-3 portfolio-item fashion wow fadeIn" data-wow-delay="0.1s">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="position-relative">
+                            <img class="card-img-top" src="img/portfolio-1.jpg" alt="Jessica Lee Fashion">
+                            <div class="portfolio-overlay d-flex align-items-center justify-content-center">
+                                <a class="btn btn-lg-square btn-outline-light border-2 mx-1" href="img/portfolio-1.jpg" data-lightbox="portfolio" data-title="Jessica Lee - Fashion"><i class="fa fa-eye"></i></a>
                             </div>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title mb-1">Jessica Lee</h5>
+                            <span class="badge bg-primary">Fashion</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
-                    <div class="portfolio-item overflow-hidden">
-                        <img class="img-fluid" src="img/portfolio-1.jpg" alt="">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-btn">
-                                <a class="btn btn-lg-square btn-outline-primary border-2 mx-1" href="img/portfolio-1.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-lg-square btn-outline-primary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                <!-- Portfolio Item 2 -->
+                <div class="col-sm-6 col-md-4 col-lg-3 portfolio-item commercial wow fadeIn" data-wow-delay="0.2s">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="position-relative">
+                            <img class="card-img-top" src="img/portfolio-2.jpg" alt="Joanne Irwin Commercial">
+                            <div class="portfolio-overlay d-flex align-items-center justify-content-center">
+                                <a class="btn btn-lg-square btn-outline-light border-2 mx-1" href="img/portfolio-2.jpg" data-lightbox="portfolio" data-title="Joanne Irwin - Commercial"><i class="fa fa-eye"></i></a>
                             </div>
-                            <div class="portfolio-name">
-                                <h5 class="text-uppercase mb-0">Jessica Lee</h5>
-                            </div>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title mb-1">Joanne Irwin</h5>
+                            <span class="badge bg-success">Commercial</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="portfolio-item overflow-hidden">
-                        <img class="img-fluid" src="img/portfolio-2.jpg" alt="">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-btn">
-                                <a class="btn btn-lg-square btn-outline-primary border-2 mx-1" href="img/portfolio-2.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-lg-square btn-outline-primary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                <!-- Portfolio Item 3 -->
+                <div class="col-sm-6 col-md-4 col-lg-3 portfolio-item editorial wow fadeIn" data-wow-delay="0.3s">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="position-relative">
+                            <img class="card-img-top" src="img/portfolio-3.jpg" alt="Sarah Quinn Editorial">
+                            <div class="portfolio-overlay d-flex align-items-center justify-content-center">
+                                <a class="btn btn-lg-square btn-outline-light border-2 mx-1" href="img/portfolio-3.jpg" data-lightbox="portfolio" data-title="Sarah Quinn - Editorial"><i class="fa fa-eye"></i></a>
                             </div>
-                            <div class="portfolio-name">
-                                <h5 class="text-uppercase mb-0">Joanne Irwin</h5>
-                            </div>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title mb-1">Sarah Quinn</h5>
+                            <span class="badge bg-warning text-dark">Editorial</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="portfolio-item overflow-hidden">
-                        <img class="img-fluid" src="img/portfolio-3.jpg" alt="">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-btn">
-                                <a class="btn btn-lg-square btn-outline-primary border-2 mx-1" href="img/portfolio-3.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-lg-square btn-outline-primary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                <!-- Portfolio Item 4 -->
+                <div class="col-sm-6 col-md-4 col-lg-3 portfolio-item runway wow fadeIn" data-wow-delay="0.4s">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="position-relative">
+                            <img class="card-img-top" src="img/portfolio-4.jpg" alt="Pamela Torney Runway">
+                            <div class="portfolio-overlay d-flex align-items-center justify-content-center">
+                                <a class="btn btn-lg-square btn-outline-light border-2 mx-1" href="img/portfolio-4.jpg" data-lightbox="portfolio" data-title="Pamela Torney - Runway"><i class="fa fa-eye"></i></a>
                             </div>
-                            <div class="portfolio-name">
-                                <h5 class="text-uppercase mb-0">Sarah Quinn</h5>
-                            </div>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title mb-1">Pamela Torney</h5>
+                            <span class="badge bg-danger">Runway</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
-                    <div class="portfolio-item overflow-hidden">
-                        <img class="img-fluid" src="img/portfolio-4.jpg" alt="">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-btn">
-                                <a class="btn btn-lg-square btn-outline-primary border-2 mx-1" href="img/portfolio-4.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-lg-square btn-outline-primary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                <!-- Portfolio Item 5 -->
+                <div class="col-sm-6 col-md-4 col-lg-3 portfolio-item fashion wow fadeIn" data-wow-delay="0.5s">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="position-relative">
+                            <img class="card-img-top" src="img/portfolio-5.jpg" alt="Lana Anderson Fashion">
+                            <div class="portfolio-overlay d-flex align-items-center justify-content-center">
+                                <a class="btn btn-lg-square btn-outline-light border-2 mx-1" href="img/portfolio-5.jpg" data-lightbox="portfolio" data-title="Lana Anderson - Fashion"><i class="fa fa-eye"></i></a>
                             </div>
-                            <div class="portfolio-name">
-                                <h5 class="text-uppercase mb-0">Pamela Torney</h5>
-                            </div>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title mb-1">Lana Anderson</h5>
+                            <span class="badge bg-primary">Fashion</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="portfolio-item overflow-hidden">
-                        <img class="img-fluid" src="img/portfolio-5.jpg" alt="">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-btn">
-                                <a class="btn btn-lg-square btn-outline-primary border-2 mx-1" href="img/portfolio-5.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-lg-square btn-outline-primary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                <!-- Portfolio Item 6 -->
+                <div class="col-sm-6 col-md-4 col-lg-3 portfolio-item commercial wow fadeIn" data-wow-delay="0.6s">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="position-relative">
+                            <img class="card-img-top" src="img/portfolio-6.jpg" alt="Pamela Stonem Commercial">
+                            <div class="portfolio-overlay d-flex align-items-center justify-content-center">
+                                <a class="btn btn-lg-square btn-outline-light border-2 mx-1" href="img/portfolio-6.jpg" data-lightbox="portfolio" data-title="Pamela Stonem - Commercial"><i class="fa fa-eye"></i></a>
                             </div>
-                            <div class="portfolio-name">
-                                <h5 class="text-uppercase mb-0">Lana Anderson</h5>
-                            </div>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title mb-1">Pamela Stonem</h5>
+                            <span class="badge bg-success">Commercial</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
-                    <div class="portfolio-item overflow-hidden">
-                        <img class="img-fluid" src="img/portfolio-6.jpg" alt="">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-btn">
-                                <a class="btn btn-lg-square btn-outline-primary border-2 mx-1" href="img/portfolio-6.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-lg-square btn-outline-primary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                <!-- Portfolio Item 7 -->
+                <div class="col-sm-6 col-md-4 col-lg-3 portfolio-item editorial wow fadeIn" data-wow-delay="0.7s">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="position-relative">
+                            <img class="card-img-top" src="img/portfolio-7.jpg" alt="Gillian Rowe Editorial">
+                            <div class="portfolio-overlay d-flex align-items-center justify-content-center">
+                                <a class="btn btn-lg-square btn-outline-light border-2 mx-1" href="img/portfolio-7.jpg" data-lightbox="portfolio" data-title="Gillian Rowe - Editorial"><i class="fa fa-eye"></i></a>
                             </div>
-                            <div class="portfolio-name">
-                                <h5 class="text-uppercase mb-0">Pamela Stonem</h5>
-                            </div>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title mb-1">Gillian Rowe</h5>
+                            <span class="badge bg-warning text-dark">Editorial</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="portfolio-item overflow-hidden">
-                        <img class="img-fluid" src="img/portfolio-7.jpg" alt="">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-btn">
-                                <a class="btn btn-lg-square btn-outline-primary border-2 mx-1" href="img/portfolio-7.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-lg-square btn-outline-primary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                <!-- Portfolio Item 8 -->
+                <div class="col-sm-6 col-md-4 col-lg-3 portfolio-item runway wow fadeIn" data-wow-delay="0.8s">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="position-relative">
+                            <img class="card-img-top" src="img/portfolio-8.jpg" alt="Naomy Olsen Runway">
+                            <div class="portfolio-overlay d-flex align-items-center justify-content-center">
+                                <a class="btn btn-lg-square btn-outline-light border-2 mx-1" href="img/portfolio-8.jpg" data-lightbox="portfolio" data-title="Naomy Olsen - Runway"><i class="fa fa-eye"></i></a>
                             </div>
-                            <div class="portfolio-name">
-                                <h5 class="text-uppercase mb-0">Gillian Rowe</h5>
-                            </div>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title mb-1">Naomy Olsen</h5>
+                            <span class="badge bg-danger">Runway</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
-                    <div class="portfolio-item overflow-hidden">
-                        <img class="img-fluid" src="img/portfolio-8.jpg" alt="">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-btn">
-                                <a class="btn btn-lg-square btn-outline-primary border-2 mx-1" href="img/portfolio-8.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-lg-square btn-outline-primary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                <!-- Portfolio Item 9 -->
+                <div class="col-sm-6 col-md-4 col-lg-3 portfolio-item fashion wow fadeIn" data-wow-delay="0.9s">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="position-relative">
+                            <img class="card-img-top" src="img/portfolio-9.jpg" alt="Barbara Serney Fashion">
+                            <div class="portfolio-overlay d-flex align-items-center justify-content-center">
+                                <a class="btn btn-lg-square btn-outline-light border-2 mx-1" href="img/portfolio-9.jpg" data-lightbox="portfolio" data-title="Barbara Serney - Fashion"><i class="fa fa-eye"></i></a>
                             </div>
-                            <div class="portfolio-name">
-                                <h5 class="text-uppercase mb-0">Naomy Olsen</h5>
-                            </div>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title mb-1">Barbara Serney</h5>
+                            <span class="badge bg-primary">Fashion</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="portfolio-item overflow-hidden">
-                        <img class="img-fluid" src="img/portfolio-9.jpg" alt="">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-btn">
-                                <a class="btn btn-lg-square btn-outline-primary border-2 mx-1" href="img/portfolio-9.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-lg-square btn-outline-primary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
-                            </div>
-                            <div class="portfolio-name">
-                                <h5 class="text-uppercase mb-0">Barbara Serney</h5>
-                            </div>
-                        </div>
+            </div>
+            
+            <!-- Portfolio Statistics -->
+            <div class="row mt-5 mb-4">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="portfolio-stats wow fadeIn" data-wow-delay="0.1s">
+                        <h3 class="counter" data-count="150">0</h3>
+                        <p>Professional Models</p>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-3">
-                    <div class="h-100 p-5 bg-dark d-flex flex-column align-items-center justify-content-center wow fadeIn" data-wow-delay="0.7s">
-                        <a href="" class="btn btn-outline-primary border-2 py-3 w-100 mb-3">Become A Model</a>
-                        <a href="" class="btn btn-primary py-3 w-100">Schedule Casting</a>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="portfolio-stats wow fadeIn" data-wow-delay="0.2s">
+                        <h3 class="counter" data-count="500">0</h3>
+                        <p>Photo Shoots</p>
                     </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="portfolio-stats wow fadeIn" data-wow-delay="0.3s">
+                        <h3 class="counter" data-count="75">0</h3>
+                        <p>Fashion Shows</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="portfolio-stats wow fadeIn" data-wow-delay="0.4s">
+                        <h3 class="counter" data-count="98">0</h3>
+                        <p>Success Rate %</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-lg-12 d-flex justify-content-center">
+                    <a href="#" class="btn btn-outline-primary border-2 py-3 px-4 mx-2">Become A Model</a>
+                    <a href="#" class="btn btn-primary py-3 px-4 mx-2">Schedule Casting</a>
                 </div>
             </div>
         </div>
