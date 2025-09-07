@@ -1,3 +1,146 @@
+/********** Enhanced Responsive Styles **********/
+
+/* Universal Responsive Improvements */
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Mobile-first breakpoints */
+/* Extra Small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .title .mx-5 {
+        margin-left: 1rem !important;
+        margin-right: 1rem !important;
+    }
+    
+    .title .px-5 {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+    
+    .display-1 {
+        font-size: 2.5rem !important;
+    }
+    
+    .display-2 {
+        font-size: 2rem !important;
+    }
+    
+    .display-3 {
+        font-size: 1.8rem !important;
+    }
+    
+    .display-4 {
+        font-size: 1.5rem !important;
+    }
+    
+    .fs-5 {
+        font-size: 1rem !important;
+    }
+    
+    .btn {
+        padding: 0.5rem 1rem !important;
+        font-size: 0.9rem !important;
+    }
+    
+    .btn-lg {
+        padding: 0.75rem 1.5rem !important;
+        font-size: 1rem !important;
+    }
+    
+    .py-3 {
+        padding-top: 0.75rem !important;
+        padding-bottom: 0.75rem !important;
+    }
+    
+    .px-5 {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+    
+    .gap-3 {
+        gap: 0.5rem !important;
+    }
+    
+    .carousel-caption {
+        padding-top: 50px;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .carousel-caption .d-flex {
+        flex-direction: column;
+    }
+    
+    .carousel-caption .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    
+    .navbar-brand h2 {
+        font-size: 1.5rem !important;
+    }
+    
+    .page-header {
+        padding-top: 120px;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .carousel-caption {
+        padding-top: 70px;
+    }
+    
+    .display-1 {
+        font-size: 3rem !important;
+    }
+    
+    .carousel-caption .btn {
+        padding: 0.75rem 2rem !important;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .carousel-caption {
+        padding-top: 80px;
+    }
+    
+    .display-1 {
+        font-size: 3.5rem !important;
+    }
+    
+    .title .mx-5 {
+        margin-left: 2rem !important;
+        margin-right: 2rem !important;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .carousel-caption {
+        padding-top: 100px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .carousel-caption {
+        padding-top: 120px;
+    }
+}
+
 /********** Template CSS **********/
 
 .back-to-top {
