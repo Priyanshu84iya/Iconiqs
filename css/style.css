@@ -499,68 +499,315 @@
 
 
 /*** Team ***/
-.team-item {
+/* Model Filter Buttons */
+#model-filters .btn {
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin: 5px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    border: 2px solid;
+}
+
+#model-filters .btn:not(.active) {
+    background: transparent;
+    color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+#model-filters .btn.active {
+    background: var(--bs-primary);
+    color: white;
+    border-color: var(--bs-primary);
+    transform: scale(1.05);
+}
+
+#model-filters .btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+/* Model Cards */
+.model-card {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.4s ease;
+    border: none;
     position: relative;
 }
 
-.team-item .team-name {
-    position: absolute;
-    width: 100%;
-    height: 60px;
-    left: 0;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0, 0, 0, .7);
+.model-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
 }
 
-.team-item .team-body {
+.model-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 350px;
+}
+
+.model-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.4s ease;
+}
+
+.model-card:hover .model-image {
+    transform: scale(1.1);
+}
+
+.model-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.8), rgba(0, 123, 255, 0.8));
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.model-card:hover .model-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+.model-social {
+    margin-bottom: 20px;
+}
+
+.model-social .btn {
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+.model-social .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.view-profile-btn {
+    border-radius: 25px;
+    padding: 12px 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.view-profile-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.4);
+}
+
+.model-badges {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 2;
+}
+
+.model-badges .badge {
+    display: block;
+    margin-bottom: 5px;
+    border-radius: 15px;
+    padding: 8px 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.model-info {
+    padding: 25px 20px;
+    text-align: center;
+}
+
+.model-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.model-title {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.model-stats {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+.model-stats .row > div {
+    border-right: 1px solid #dee2e6;
+}
+
+.model-stats .row > div:last-child {
+    border-right: none;
+}
+
+.model-stats small {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+.model-stats .fw-bold {
+    font-size: 1.1rem;
+    color: var(--bs-primary);
+    margin-top: 5px;
+}
+
+/* Team Statistics */
+.team-stats {
+    background: linear-gradient(135deg, var(--bs-primary) 0%, var(--bs-secondary) 100%);
     position: relative;
     overflow: hidden;
 }
 
-.team-item .team-body .team-before,
-.team-item .team-body .team-after {
+.team-stats::before {
+    content: '';
     position: absolute;
-    content: "";
-    width: 0;
-    height: calc(100% - 60px);
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, .7);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    transition: .5s;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    animation: rotate 20s linear infinite;
 }
 
-.team-item .team-body .team-after {
-    left: auto;
-    right: 0;
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
-.team-item .team-body .team-before {
-    text-align: right;
+.team-stats .counter {
+    font-size: 3rem;
+    font-weight: 700;
+    position: relative;
+    z-index: 2;
 }
 
-.team-item:hover .team-body .team-before,
-.team-item:hover .team-body .team-after {
-    width: 50%;
+.team-stats p {
+    position: relative;
+    z-index: 2;
+    font-size: 1.1rem;
+    opacity: 0.9;
 }
 
-.team-item .team-body .team-before span,
-.team-item .team-body .team-after span {
-    margin: 5px;
-    color: var(--bs-white);
+/* Model Container for Filtering */
+.model-container {
+    transition: all 0.3s ease;
+}
+
+.model-item {
+    transition: all 0.5s ease;
+}
+
+.model-item.hidden {
     opacity: 0;
-    transition: .5s;
+    transform: scale(0.8);
+    display: none;
 }
 
-.team-item:hover .team-body .team-before span,
-.team-item:hover .team-body .team-after span {
+.model-item.show {
     opacity: 1;
-    transition-delay: .2s;
+    transform: scale(1);
+    display: block;
+}
+
+/* Responsive Team Design */
+@media (max-width: 768px) {
+    .model-image-wrapper {
+        height: 280px;
+    }
+    
+    .model-info {
+        padding: 20px 15px;
+    }
+    
+    .model-name {
+        font-size: 1.1rem;
+    }
+    
+    #model-filters .btn {
+        padding: 8px 15px;
+        font-size: 0.85rem;
+        margin: 3px;
+    }
+    
+    .team-stats .counter {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .model-image-wrapper {
+        height: 250px;
+    }
+    
+    #model-filters {
+        text-align: center;
+    }
+    
+    #model-filters .btn {
+        display: inline-block;
+        margin: 2px;
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+    
+    .model-overlay {
+        padding: 15px;
+    }
+    
+    .model-social .btn {
+        width: 40px;
+        height: 40px;
+        margin: 0 3px;
+    }
+    
+    .view-profile-btn {
+        padding: 10px 20px;
+        font-size: 0.85rem;
+    }
+    
+    .team-stats .counter {
+        font-size: 2rem;
+    }
+    
+    .team-stats p {
+        font-size: 1rem;
+    }
 }
 
 
